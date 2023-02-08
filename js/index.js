@@ -142,3 +142,263 @@ window.addEventListener("resize", () => {
     searchForm.classList.remove("show");
   }
 });
+
+// Calendar
+const calendarTemplate = document.createElement("template");
+
+calendarTemplate.innerHTML = `
+<div class="calendar-container">
+    <div class="calendar_header">
+      <i class="bx bxs-chevron-left"></i>
+      <h4 class="heading"></h4>
+      <i class="bx bxs-chevron-right"></i>
+    </div>
+
+    <ul class="calendar_weekdays">
+      <li id="week-day"></li>
+      <li id="week-day"></li>
+      <li id="week-day"></li>
+      <li id="week-day"></li>
+      <li id="week-day"></li>
+      <li id="week-day"></li>
+      <li id="week-day"></li>
+    </ul>
+    
+    <ul class="calendar_content">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+`;
+
+class Calendar extends HTMLElement {
+  // CALENDAR
+  static months = [
+    "JANUARY",
+    "FEBRUARY",
+    "MARCH",
+    "APRIL",
+    "MAY",
+    "JUNE",
+    "JULY",
+    "AUGUST",
+    "SEPTEMBER",
+    "OCTOBER",
+    "NOVEMBER",
+    "DECEMBER",
+  ];
+  static monthColors = [
+    "saddlebrown",
+    "darkseagreen",
+    "darksalmon",
+    "darkgoldenrod",
+    "darkolivegreen",
+    "teal",
+    "#292c35",
+    "firebrick",
+    "indigo",
+    "dodgerblue",
+    "orange",
+    "darkslategrey",
+  ];
+  static daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  static weekDays;
+
+  static date = new Date();
+  static month = Calendar.date.getMonth();
+  static year = Calendar.date.getFullYear();
+  static today = Calendar.date.getDate();
+
+  constructor() {
+    super();
+    this.append(calendarTemplate.content.cloneNode(true));
+
+    // Rendering days of the week
+    Calendar.weekDays = this.querySelectorAll("#week-day");
+    this.calenderHeader = this.querySelector(".calendar_header");
+    this.calendarHeading = this.calenderHeader.querySelector(".heading");
+
+    this.nthDay = this.querySelector(
+      `.calendar-container .calendar_content > *:nth-child(${Calendar.today})`
+    );
+    this.calendarDays = document.querySelectorAll(".calendar_content li");
+
+    Calendar.weekDays.forEach((weekDay, index) => {
+      const dayOfWeek = Calendar.daysOfWeek[index].substring(0, 3);
+      weekDay.textContent = dayOfWeek;
+      weekDay.style.color = `${Calendar.monthColors[Calendar.month]}`;
+      weekDay.style.transition = "all 2000ms ease";
+
+      this.nthDay.style.backgroundColor = `${
+        Calendar.monthColors[Calendar.month]
+      }`;
+      this.nthDay.style.color = `white`;
+      this.nthDay.style.transition = "all 2000ms ease";
+
+      // Rendering dates of the month
+      this.calendarHeading.textContent = `${Calendar.months[Calendar.month]} ${
+        Calendar.year
+      }`;
+      this.calenderHeader.style.backgroundColor = `${
+        Calendar.monthColors[Calendar.month]
+      }`;
+      this.calenderHeader.style.transition = "all 2000ms ease";
+    });
+
+    this.calendarDays.forEach((calendarDay, index) => {
+      calendarDay.textContent = this.getAllDaysInMonth(
+        Calendar.year,
+        Calendar.month
+      )[index];
+    });
+  }
+
+  connectedCallback() {
+    const bxPrev = this.querySelector(".bxs-chevron-left");
+    const bxNext = this.querySelector(".bxs-chevron-right");
+
+    bxPrev.addEventListener("click", () => {
+      Calendar.month -= 1;
+      this.calendarHeading.textContent = `${Calendar.months[Calendar.month]} ${
+        Calendar.year
+      }`;
+      this.calenderHeader.style.backgroundColor = `${
+        Calendar.monthColors[Calendar.month]
+      }`;
+      this.nthDay.style.backgroundColor = `${
+        Calendar.monthColors[Calendar.month]
+      }`;
+
+      //
+      Calendar.weekDays.forEach((weekDay) => {
+        weekDay.style.color = `${Calendar.monthColors[Calendar.month]}`;
+      });
+      this.calendarDays.forEach((calendarDay, index) => {
+        calendarDay.textContent = this.getAllDaysInMonth(
+          Calendar.year,
+          Calendar.month
+        )[index];
+      });
+
+      if (Calendar.month < 0) {
+        Calendar.month = 11;
+        const newYear = Calendar.year - 1;
+        this.calendarHeading.textContent = `${
+          Calendar.months[Calendar.month]
+        } ${newYear}`;
+        this.calenderHeader.style.backgroundColor = `${
+          Calendar.monthColors[Calendar.month]
+        }`;
+        this.nthDay.style.backgroundColor = `${
+          Calendar.monthColors[Calendar.month]
+        }`;
+        Calendar.weekDays.forEach((weekDay) => {
+          weekDay.style.color = `${Calendar.monthColors[Calendar.month]}`;
+        });
+        this.calendarDays.forEach((calendarDay, index) => {
+          calendarDay.textContent = this.getAllDaysInMonth(
+            Calendar.year,
+            Calendar.month
+          )[index];
+        });
+        Calendar.year = newYear;
+      }
+    });
+
+    bxNext.addEventListener("click", () => {
+      Calendar.month += 1;
+      this.calendarHeading.textContent = `${Calendar.months[Calendar.month]} ${
+        Calendar.year
+      }`;
+      this.calenderHeader.style.backgroundColor = `${
+        Calendar.monthColors[Calendar.month]
+      }`;
+      this.nthDay.style.backgroundColor = `${
+        Calendar.monthColors[Calendar.month]
+      }`;
+      Calendar.weekDays.forEach((weekDay) => {
+        weekDay.style.color = `${Calendar.monthColors[Calendar.month]}`;
+      });
+      this.calendarDays.forEach((calendarDay, index) => {
+        calendarDay.textContent = this.getAllDaysInMonth(
+          Calendar.year,
+          Calendar.month
+        )[index];
+      });
+
+      if (Calendar.month > 11) {
+        Calendar.month = 0;
+        const newYear = Calendar.year + 1;
+        this.calendarHeading.textContent = `${
+          Calendar.months[Calendar.month]
+        } ${newYear}`;
+        this.calenderHeader.style.backgroundColor = `${
+          Calendar.monthColors[Calendar.month]
+        }`;
+        this.nthDay.style.backgroundColor = `${
+          Calendar.monthColors[Calendar.month]
+        }`;
+        Calendar.weekDays.forEach((weekDay) => {
+          weekDay.style.color = `${Calendar.monthColors[Calendar.month]}`;
+        });
+        this.calendarDays.forEach((calendarDay, index) => {
+          calendarDay.textContent = this.getAllDaysInMonth(
+            Calendar.year,
+            Calendar.month
+          )[index];
+        });
+        Calendar.year = newYear;
+      }
+    });
+  }
+
+  getAllDaysInMonth(year, month) {
+    const date = new Date(year, month, 1);
+    const dates = [];
+
+    while (date.getMonth() === month) {
+      dates.push(new Date(date).getDate());
+      date.setDate(date.getDate() + 1);
+    }
+    return dates;
+  }
+}
+customElements.define("nyc-calendar", Calendar);
