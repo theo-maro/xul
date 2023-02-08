@@ -547,7 +547,7 @@ body {
   align-items: center;
 }
 
-.calendar-container .calendar_header h1 {
+.calendar-container .calendar_header .heading {
   font-size: 1.5em;
   text-transform: uppercase;
   color: #ffffff;

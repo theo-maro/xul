@@ -1,9 +1,7 @@
 const linkItems = document.querySelectorAll(
   "#sidebar .side-menu.top .list-item a.list-link"
 );
-const spanItem = document.querySelector(
-  "#sidebar .side-menu.top .list-item a.list-link span"
-);
+
 const sideBar = document.querySelector("#sidebar");
 const menuBar = document.querySelector("#content .bx-menu");
 const searchBtn = document.querySelector("#content .form-input button");
@@ -13,7 +11,7 @@ const activeBreadCrumb = document.querySelector(".breadcrumb li a.active");
 const bxIcon = document.querySelectorAll(
   "#sidebar .side-menu .list-item small"
 );
-const navBar = document.querySelector("#content nav");
+
 const themeTogglers = document.querySelectorAll(
   "#content nav .theme-toggler .icon"
 );
@@ -139,7 +137,7 @@ window.addEventListener("resize", () => {
     });
   }
 
-  if (this.innerWidth > 576) {
+  if (window.innerWidth > 576) {
     searchIcon.classList.replace("bx-x", "bx-search");
     searchForm.classList.remove("show");
   }
