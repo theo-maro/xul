@@ -645,25 +645,25 @@ body {
   overflow: auto;
 }
 
-.exam-bar table {
+table {
   border-collapse: collapse;
   text-align: left;
 }
 
-.exam-bar table tr th,
-.exam-bar table tr td {
+table tr th,
+table tr td {
   padding-block: 10px;
   font-size: 15px;
   white-space: nowrap;
   padding-left: 30px;
 }
 
-.exam-bar table tr th:nth-of-type(1),
-.exam-bar table tr td:nth-of-type(1) {
+table tr th:nth-of-type(1),
+table tr td:nth-of-type(1) {
   padding-left: 0;
 }
 
-.exam-bar table tr td {
+table tr td {
   border-top: 1px solid var(--dark-grey);
 }
 
