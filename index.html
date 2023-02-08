@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- MATERIAL ICONS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp"
+      rel="stylesheet"
+    />
+
+    <!-- BOXI ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CUSTOM STYLESHEET -->
+    <link rel="stylesheet" href="./index.css" />
+
+    <title></title>
+    <link
+      rel="shortcut icon"
+      href="./images/bookstore-logo.jpg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!--  ****** SEDEBAR SECTION ******  -->
+    <section id="sidebar">
+      <a href="/" class="brand">
+        <img src="./images/bookstore-logo.jpg" alt="" />
+        <h1>NYC <span>School</span></h1>
+      </a>
+
+      <ul class="side-menu top">
+        <li class="list-item active">
+          <a href="/" class="list-link" title="Home">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="/teachers" class="list-link" title="Teachers">
+            <i class="bx bxs-group"></i>
+            <span class="text">Teachers</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="/students" class="list-link" title="Students">
+            <i class="bx bxs-group"></i>
+            <span class="text">Students</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="/parents" class="list-link" title="Parents">
+            <i class="bx bxs-school"></i>
+            <span class="text">Parents</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="/classes" class="list-link" title="Classes">
+            <i class="bx bxs-school"></i>
+            <span class="text">Classes</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="/subjects" class="list-link" title="Subjects">
+            <i class="bx bx-library"></i>
+            <span class="text">Subjects</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="/attendance" class="list-link" title="Attendance">
+            <i class="bx bxs-timer"></i>
+            <span class="text">Attendance</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="/timetable" class="list-link" title="Timetable">
+            <i class="bx bxs-timer"></i>
+            <span class="text">Timetable</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="/examination" class="list-link" title="Examination">
+            <i class="bx bxs-doughnut-chart"></i>
+            <span class="text">Examination</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="/necta" class="list-link" title="NECTA">
+            <i class="bx bxs-graduation"></i>
+            <span class="text">NECTA</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="side-menu top">
+        <li class="list-item">
+          <a href="/notify" class="list-link" title="Notifications">
+            <i class="bx bxs-bell"></i>
+            <span class="text">Notify</span>
+          </a>
+          <small class="num">8</small>
+        </li>
+        <li class="list-item">
+          <a href="/events" class="list-link" title="Events">
+            <i class="bx bxs-calendar-exclamation"></i>
+            <span class="text">Events</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="/message" class="list-link" title="Message">
+            <i class="bx bxs-message-dots"></i>
+            <span class="text">Message</span>
+          </a>
+          <small class="num">3</small>
+        </li>
+        <li class="list-item">
+          <a href="/reports" class="list-link" title="Analytics">
+            <i class="bx bxs-doughnut-chart"></i>
+            <span class="text">Analytics</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="side-menu top">
+        <li class="list-item">
+          <a href="/accoutant" class="list-link" title="Accoutant">
+            <i class="bx bx-money-withdraw"></i>
+            <span class="text">Accoutant</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="side-menu">
+        <li class="list-item">
+          <a href="#settings" class="list-link" title="General Settings">
+            <i class="bx bx-cog"></i>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="#logout" class="list-link logout">
+            <i class="bx bx-log-out"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ****** MAIN SECTION ****** -->
+    <section id="content" class="main-container">
+      <!-- ****** NAVBAR ****** -->
+      <nav>
+        <i class="bx bx-menu"></i>
+
+        <a href="#" class="nav-link">Categories</a>
+        <form action="#">
+          <div class="form-input">
+            <input type="search" placeholder="Search..." />
+            <button type="submit" class="search-btn">
+              <i class="bx bx-search"></i>
+            </button>
+          </div>
+        </form>
+
+        <div class="theme-toggler" title="Toggles light & dark">
+          <span class="material-symbols-sharp icon active"> light_mode </span>
+          <span class="material-symbols-sharp icon"> dark_mode </span>
+        </div>
+
+        <div class="profile">
+          <img src="./images/profile-photo.jpg" alt="" />
+          <div>
+            <span class="user-name">John Doe</span>
+            <span class="user-role">Admin</span>
+          </div>
+          <i class="bx bx-chevron-down"></i>
+          <ul class="drop-menu">
+            <li>
+              <a href="">My Account</a>
+            </li>
+            <li>
+              <a href="">Change password</a>
+            </li>
+            <li>
+              <a href="">Sign Out</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- ****** MAIN CONTENT ****** -->
+      <main>
+        <div class="head-title">
+          <div class="left">
+            <h1>Dashboard</h1>
+            <ul class="breadcrumb">
+              <li><a href="#" class="list-link" title="">Dashboard</a></li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li><a href="#" class="active">Home</a></li>
+            </ul>
+          </div>
+          <a href="#" class="btn-download">
+            <i class="bx bxs-cloud-download"></i>
+            <span class="text">Download PDF</span>
+          </a>
+        </div>
+
+        <div id="main-page_content"></div>
+      </main>
+
+      <!-- ****** FOOTER ****** -->
+      <footer>
+        <p>
+          Copyright &copy;2023 <a href="#">NYC School</a>. All rights reserved.
+        </p>
+      </footer>
+    </section>
+
+    <script src="./index.js"></script>
+    <script src="./router.js"></script>
+  </body>
+</html>
