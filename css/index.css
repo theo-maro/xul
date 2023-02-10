@@ -531,13 +531,15 @@ body {
 /* CALENDAR */
 .main-content .calendar {
   order: 1;
-  width: 100%;
+  width: calc(100% - (35% + 30px));
   font-family: var(--lato);
   overflow: auto;
 }
 
 /* CALENDAR HEADER*/
 .calendar-container .calendar_header {
+  width: 100%;
+  height: 70px;
   padding: 18px 45px;
   border-radius: 12px 12px 0px 0px;
   display: flex;
