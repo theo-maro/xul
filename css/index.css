@@ -531,15 +531,13 @@ body {
 /* CALENDAR */
 .main-content .calendar {
   order: 1;
-  width: calc(100% - (35% + 30px));
+  width: 100%;
   font-family: var(--lato);
+  overflow: auto;
 }
 
 /* CALENDAR HEADER*/
 .calendar-container .calendar_header {
-  width: 100%;
-  height: 70px;
-  /* background-color: #16a085; */
   padding: 18px 45px;
   border-radius: 12px 12px 0px 0px;
   display: flex;
@@ -564,7 +562,6 @@ body {
 .calendar-container .calendar_weekdays {
   font-size: 18px;
   text-align: center;
-  background-color: rgba(170, 170, 170, 0.144);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(calc(100% / 7), 1fr));
 }
@@ -582,7 +579,6 @@ body {
 /* CALENDAR WEEKDAYS */
 .calendar-container .calendar_weekdays {
   padding-block: 20px;
-  /* color: #16a085; */
   font-weight: 600;
 }
 
@@ -595,7 +591,7 @@ body {
 }
 
 .calendar-container .calendar_content > *:hover {
-  background-color: var(--dark-grey);
+  background-color: whitesmoke;
   color: #db504a;
 }
 
@@ -648,6 +644,7 @@ body {
 table {
   border-collapse: collapse;
   text-align: left;
+  width: 100%;
 }
 
 table tr th,
