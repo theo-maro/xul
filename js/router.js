@@ -35,11 +35,6 @@ const urlRoutes = {
     title: "Students | NYC School",
     description: "This is a students' page",
   },
-  "/parents": {
-    template: "/templates/parents.html",
-    title: "Parents | NYC School",
-    description: "This is a parents' page",
-  },
   "/classes": {
     template: "/templates/classes.html",
     title: "Classes | NYC School",

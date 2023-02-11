@@ -257,7 +257,7 @@ body {
   left: 60px;
 }
 
-#content nav {
+nav {
   height: 56px;
   background-color: var(--light);
   padding: 0 24px;
@@ -267,36 +267,36 @@ body {
   font-family: var(--lato);
 }
 
-#content nav a {
+nav a {
   color: var(--dark);
 }
 
-#content nav .bx.bx-menu {
+nav .bx.bx-menu {
   cursor: pointer;
 }
 
-#content nav .nav-link {
+nav .nav-link {
   font-size: 16px;
   transition: all 300ms ease;
 }
 
-#content nav .nav-link:hover {
+nav .nav-link:hover {
   color: var(--blue);
 }
 
-#content nav form {
+nav form {
   max-width: 400px;
   width: 100%;
   margin-right: auto;
 }
 
-#content nav .form-input {
+nav .form-input {
   display: flex;
   align-items: center;
   height: 36px;
 }
 
-#content nav .form-input input {
+nav .form-input input {
   flex-grow: 1;
   padding: 0 16px;
   height: 100%;
@@ -306,7 +306,7 @@ body {
   color: var(--dark);
 }
 
-#content nav .form-input button {
+nav .form-input button {
   width: 36px;
   height: 100%;
   display: flex;
@@ -319,7 +319,7 @@ body {
   cursor: pointer;
 }
 
-#content nav .theme-toggler {
+nav .theme-toggler {
   background-color: rgba(132, 139, 200, 0.18);
   display: flex;
   align-items: center;
@@ -330,7 +330,7 @@ body {
   border-radius: 0.4rem;
 }
 
-#content nav .theme-toggler .icon {
+nav .theme-toggler .icon {
   font-size: 1.2rem;
   width: 50%;
   height: 100%;
@@ -340,12 +340,12 @@ body {
   cursor: pointer;
 }
 
-#content nav .theme-toggler .icon.active {
+nav .theme-toggler .icon.active {
   color: #fff;
   border-radius: 0.4rem;
 }
 
-#content nav .profile {
+nav .profile {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -355,23 +355,23 @@ body {
   cursor: pointer;
 }
 
-#content nav .profile > div {
+nav .profile > div {
   display: flex;
   flex-direction: column;
   font-size: 0.9rem;
 }
 
-#content nav .profile .user-name {
+nav .profile .user-name {
   font-weight: 600;
 }
 
-#content nav .profile img {
+nav .profile img {
   width: 42px;
   height: 42px;
   border-radius: 50%;
 }
 
-#content nav .profile .drop-menu {
+nav .profile .drop-menu {
   position: absolute;
   top: 55px;
   right: -17px;
@@ -382,11 +382,11 @@ body {
   transition: all 300ms ease;
 }
 
-#content nav .profile .drop-menu.show {
+nav .profile .drop-menu.show {
   display: block;
 }
 
-#content nav .profile .drop-menu a {
+nav .profile .drop-menu a {
   display: inline-block;
   padding: 6px 0 6px 15px;
   width: 100%;
@@ -394,17 +394,17 @@ body {
   transition: all 300ms ease;
 }
 
-#content nav .profile .drop-menu a:hover {
+nav .profile .drop-menu a:hover {
   background-color: #cfe8ff;
 }
 
-#content main {
+main {
   width: 100%;
   padding: 36px 44px;
   font-family: var(--poppins);
 }
 
-#content main .head-title {
+main .head-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -412,33 +412,33 @@ body {
   flex-wrap: wrap;
 }
 
-#content main .head-title .left h1 {
+main .head-title .left h1 {
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 10px;
   color: var(--dark);
 }
 
-#content main .head-title .left .breadcrumb {
+main .head-title .left .breadcrumb {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-#content main .head-title .left .breadcrumb li {
+main .head-title .left .breadcrumb li {
   color: var(--dark);
 }
 
-#content main .head-title .left .breadcrumb li a {
+main .head-title .left .breadcrumb li a {
   color: var(--dark-grey);
   pointer-events: none;
 }
 
-#content main .head-title .left .breadcrumb li a.active {
+main .head-title .left .breadcrumb li a.active {
   color: var(--blue);
   pointer-events: unset;
 }
 
-#content main .head-title .btn-download {
+main .head-title .btn-download {
   height: 36px;
   padding: 0 16px;
   border-radius: 36px;
@@ -451,14 +451,14 @@ body {
   font-weight: 500;
 }
 
-#content main .box-info {
+.box-info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
   margin-top: 40px;
 }
 
-#content main .box-info li {
+.box-info li {
   padding: 24px;
   background-color: var(--light);
   border-radius: 20px;
@@ -467,8 +467,8 @@ body {
   gap: 24px;
 }
 
-#content main .box-info li .bx,
-#content main .box-info li .icon {
+.box-info li .bx,
+.box-info li .icon {
   font-size: 36px;
   width: 80px;
   height: 80px;
@@ -478,50 +478,50 @@ body {
   justify-content: center;
 }
 
-#content main .box-info li:nth-child(1) .bx {
+.box-info li:nth-child(1) .bx {
   background-color: var(--light-blue);
   color: var(--blue);
 }
 
-#content main .box-info li:nth-child(2) .bx {
+.box-info li:nth-child(2) .bx {
   background-color: rgba(255, 68, 0, 0.288);
   color: rgba(255, 68, 0, 0.911);
 }
 
-#content main .box-info li:nth-child(3) .bx {
+.box-info li:nth-child(3) .bx {
   background-color: rgba(0, 128, 128, 0.384);
   color: teal;
 }
 
-#content main .box-info li:nth-child(4) .bx {
+.box-info li:nth-child(4) .bx {
   background-color: rgba(255, 140, 0, 0.349);
   color: darkorange;
 }
 
-#content main .box-info li h3 {
+.box-info li h3 {
   font-size: 32px;
 }
 
-#content main .main-content {
+.main-content {
   margin-top: 40px;
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
 
-.main-content .calendar,
-.main-content .duty-bar,
-.main-content .exam-bar {
+.calendar,
+.duty-bar,
+.exam-bar {
   background-color: white;
   color: var(--dark);
-  padding: 36px 40px;
+  padding: 36px 20px;
   border-radius: 10px;
   box-shadow: 20px 20px 0 var(--grey);
 }
 
-.main-content .calendar h3,
-.main-content .duty-bar h3,
-.main-content .exam-bar h3 {
+.calendar h3,
+.duty-bar h3,
+.exam-bar h3 {
   font-size: 22px;
   margin-bottom: 32px;
   font-weight: 600;
@@ -529,15 +529,15 @@ body {
 }
 
 /* CALENDAR */
-.main-content .calendar {
+.calendar {
   order: 1;
   width: calc(100% - (35% + 30px));
   font-family: var(--lato);
-  overflow: auto;
+  padding-bottom: 0;
 }
 
 /* CALENDAR HEADER*/
-.calendar-container .calendar_header {
+.calendar_header {
   width: 100%;
   height: 70px;
   padding: 18px 45px;
@@ -547,52 +547,55 @@ body {
   align-items: center;
 }
 
-.calendar-container .calendar_header .heading {
+.calendar_header .heading {
   font-size: 1.5em;
   text-transform: uppercase;
   color: #ffffff;
 }
 
-.calendar-container .calendar_header .bx {
+.calendar_header .bx {
   color: #ffffff;
   font-size: 22px;
   cursor: pointer;
 }
 
 /* CALENDAR WEEKDAYS & CONTENT*/
-.calendar-container .calendar_content,
-.calendar-container .calendar_weekdays {
+.calendar_content,
+.calendar_weekdays {
   font-size: 18px;
   text-align: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(calc(100% / 7), 1fr));
 }
 
-.calendar-container .calendar_weekdays > *,
-.calendar-container .calendar_content > * {
+.calendar_weekdays > *,
+.calendar_content > * {
   padding-block: 15px;
   width: 55px;
   margin: 0 auto;
   cursor: default;
   transition: all 300ms ease;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* CALENDAR WEEKDAYS */
-.calendar-container .calendar_weekdays {
+.calendar_weekdays {
   padding-block: 20px;
   font-weight: 600;
 }
 
 /* CALENDAR CONTENT */
-.calendar-container .calendar_content {
+.calendar_content {
   color: #292c35;
   padding-bottom: 30px;
   border-radius: 0 0 12px 12px;
   gap: 15px 0;
 }
 
-.calendar-container .calendar_content > *:hover {
+.calendar_content > *:hover {
   background-color: whitesmoke;
   color: #db504a;
 }
@@ -666,6 +669,34 @@ table tr td {
   border-top: 1px solid var(--dark-grey);
 }
 
+#table-wrapper {
+  overflow: auto;
+}
+
+/* Active and Hoverable Pagination */
+#pagination {
+  justify-content: end;
+  display: flex;
+}
+
+#pagination li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #000;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#pagination li a.active {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+#pagination li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
 /* FOOTER */
 footer {
   color: var(--dark-grey);
@@ -683,7 +714,7 @@ footer p a {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 1724px) {
-  .calendar-container .calendar_content {
+  .calendar_content {
     gap: 60px 0;
   }
 }
@@ -699,7 +730,7 @@ footer p a {
 
   .main-content .calendar {
     order: 2;
-    width: 100%;
+    min-width: 100%;
   }
 
   .main-content .bar {
@@ -707,7 +738,7 @@ footer p a {
     order: 1;
   }
 
-  .calendar-container .calendar_content {
+  .calendar_content {
     gap: 15px 0;
   }
 }
@@ -721,22 +752,22 @@ footer p a {
     display: none;
   }
 
-  .calendar-container .calendar_weekdays,
-  .calendar-container .calendar_content {
+  .calendar_weekdays,
+  .calendar_content {
     padding-inline: 10px;
   }
 
-  .calendar-container .calendar_content {
+  .calendar_content {
     gap: 0;
   }
 }
 
 @media screen and (max-width: 576px) {
-  #content nav .form-input input {
+  nav .form-input input {
     display: none;
   }
 
-  #content nav .form-input button {
+  nav .form-input button {
     width: auto;
     height: auto;
     background-color: transparent;
@@ -744,12 +775,12 @@ footer p a {
     color: var(--dark);
   }
 
-  #content nav form.show .form-input input {
+  nav form.show .form-input input {
     display: block;
     width: 100%;
   }
 
-  #content nav form.show .form-input button {
+  nav form.show .form-input button {
     width: 36px;
     height: 100%;
     border-radius: 0 36px 36px 0;
@@ -757,30 +788,30 @@ footer p a {
     background-color: var(--red);
   }
 
-  #content nav form.show ~ .theme-toggler,
-  #content nav form.show ~ .profile {
+  nav form.show ~ .theme-toggler,
+  nav form.show ~ .profile {
     display: none;
   }
 
-  .calendar-container .calendar_header {
+  .calendar_header {
     height: 50px;
     padding: 18px 15px;
   }
 
-  .calendar-container .calendar_header .bx,
-  .calendar-container .calendar_header .heading {
-    font-size: 16px;
+  .calendar_header .bx,
+  .calendar_header .heading {
+    font-size: 15px;
   }
 
-  .calendar-container .calendar_weekdays,
-  .calendar-container .calendar_content {
+  .calendar_weekdays,
+  .calendar_content {
     padding-inline: 5px 10px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
-  .calendar-container .calendar_weekdays > *,
-  .calendar-container .calendar_content > * {
-    padding-block: 7px;
-    width: 35px;
+  .calendar_weekdays > *,
+  .calendar_content > * {
+    padding-block: 6px;
+    width: 30px;
   }
 }
