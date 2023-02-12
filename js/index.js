@@ -1,4 +1,5 @@
 import Calendar from "../components/Calendar.js";
+import Router from "./Router.js";
 
 const linkItems = document.querySelectorAll(
   "#sidebar .side-menu.top .list-item a.list-link"
@@ -147,3 +148,23 @@ window.addEventListener("resize", () => {
 
 // Calendar
 customElements.define("nyc-calendar", Calendar);
+
+// Routing
+const navLinks = document.querySelectorAll("#sidebar .side-menu li");
+
+navLinks.forEach((navLink) => {
+  // watch navigation links only
+  navLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (
+      e.target.parentElement.classList.contains("list-item") ||
+      e.target.parentElement.parentElement.classList.contains("list-item")
+    )
+      Router.route(e);
+    return;
+  });
+});
+window.onpopstate = Router.locationHandler; // watch for url changes
+
+window.route = Router.route; // handle initial url
+Router.locationHandler();
